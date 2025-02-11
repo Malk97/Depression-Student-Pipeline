@@ -1,0 +1,142 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: intro
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: intro
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - data_preprocess
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: depression_dataset
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: depression_dataset
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: markdown
+  name: prepro
+  retry_config: null
+  status: updated
+  timeout: null
+  type: markdown
+  upstream_blocks: []
+  uuid: prepro
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: transformers/data_preprocess.py
+    file_source:
+      path: transformers/data_preprocess.py
+  downstream_blocks:
+  - build
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: data_preprocess
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - depression_dataset
+  uuid: data_preprocess
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - random_forest
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: build
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - data_preprocess
+  uuid: build
+- all_upstream_blocks_executed: true
+  color: purple
+  configuration:
+    dynamic: false
+  downstream_blocks:
+  - fast_api
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: random_forest
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - build
+  uuid: random_forest
+- all_upstream_blocks_executed: true
+  color: grey
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: fast_api
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - random_forest
+  uuid: fast_api
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2025-02-09 21:31:10.501464+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: pipelines_depression_project
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: pipelines_depression_project
+variables_dir: /home/src/mage_data/default_repo
+widgets: []
