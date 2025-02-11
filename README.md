@@ -6,7 +6,47 @@ This project focuses on analyzing student depression data to understand factors 
 
 ### Project Structure
 
-📦 **default\_repo** ┣ 📂 **custom** ┃ ┣ 📜 `__init__.py` ┃ ┣ 📜 `fast_api.py` - FastAPI implementation ┃ ┗ 📜 `random_forest.py` - Random forest model script ┃ ┣ 📂 **data\_exporters** ┃ ┣ 📜 `__init__.py` ┃ ┣ 📜 `build.py` - Data exporting script ┃ ┗ 📜 `export_titanic_clean.py` - Titanic dataset export ┃ ┣ 📂 **data\_loaders** ┃ ┣ 📜 `Student_Depression.csv` - Student depression dataset ┃ ┣ 📜 `__init__.py` ┃ ┣ 📜 `depression_dataset.py` - Data loading functions ┃ ┗ 📜 `load_titanic.py` - Titanic dataset loader ┃ ┣ 📂 **data\_preprocess** ┃ ┣ 📜 `__init__.py` ┃ ┣ 📜 `convert_type.py` - Data type conversion ┃ ┣ 📜 `encoder.py` - Categorical encoding ┃ ┣ 📜 `handle_null.py` - Handling missing values ┃ ┗ 📜 `rename_column.py` - Column renaming script ┃ ┣ 📂 **transformers** ┃ ┣ 📜 `__init__.py` ┃ ┣ 📜 `data_preprocess.py` - Data preprocessing functions ┃ ┗ 📜 `fill_in_missing_values.py` - Missing value imputation ┃ ┣ 📂 **model** ┃ ┗ 📜 `Training.py` - Model training script ┃ ┣ 📂 **utils** ┃ ┣ 📜 `__init__.py` ┃ ┣ 📜 `io_config.yaml` - I/O configurations ┃ ┣ 📜 `metadata.yaml` - Metadata file ┃ ┗ 📜 `requirements.txt` - Dependencies ┃ ┣ 📂 **mage\_data** - Mage orchestration files ┣ 📂 **Mlops** - MLOps pipeline files ┣ 📜 `interface.py` - Main interface script
+📁 default_repo  
+├── 📂 custom  
+│   ├── 📄 __init__.py  
+│   ├── 🚀 fast_api.py  - FastAPI implementation  
+│   ├── 🌲 random_forest.py  - Random forest model script  
+│  
+├── 📂 data_exporters  
+│   ├── 📄 __init__.py  
+│   ├── 📦 build.py  - Data exporting script  
+│     
+├── 📂 data_loaders  
+│   ├── 📄 __init__.py  
+│   ├── 📊 Student_Depression.csv  - Student depression dataset  
+│   ├── 🔄 depression_dataset.py  - Data loading functions  
+│   ├── 🚂 load_titanic.py  - Titanic dataset loader  
+│  
+├── 📂 data_preprocess  
+│   ├── 📄 __init__.py  
+│   ├── 🔁 convert_type.py  - Data type conversion  
+│   ├── 🔤 encoder.py  - Categorical encoding  
+│   ├── 🩹 handle_null.py  - Handling missing values  
+│   ├── 🏷️ rename_column.py  - Column renaming script  
+│  
+├── 📂 transformers  
+│   ├── 📄 __init__.py  
+│   ├── 🔧 data_preprocess.py  - Data preprocessing functions  
+│   ├── 🏗️ fill_in_missing_values.py  - Missing value imputation  
+│  
+├── 📂 model  
+│   ├── 🎯 Training.py  - Model training script  
+│  
+├── 📂 utils  
+│   ├── 📄 __init__.py  
+│   ├── ⚙️ io_config.yaml  - I/O configurations  
+│   ├── 📜 metadata.yaml  - Metadata file  
+│   ├── 📋 requirements.txt  - Dependencies  
+│  
+├── 📂 mage_data  - Mage orchestration files  
+├── 📂 Mlops  - MLOps pipeline files  
+├── 🖥️ interface.py  - Main interface script  
+
 
 ### Getting Started
 
